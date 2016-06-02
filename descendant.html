@@ -1,0 +1,71 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <!-- EXAMPLE 1 -->
+    <div class="container">
+        <div>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet tempor quam, ac posuere turpis iaculis vitae. Donec turpis libero, auctor quis nibh in, accumsan dictum arcu. Mauris euismod massa sit amet turpis auctor finibus.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet tempor quam, ac posuere turpis iaculis vitae. Donec turpis libero, auctor quis nibh in, accumsan dictum arcu. Mauris euismod massa sit amet turpis auctor finibus.
+            </div>
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet tempor quam, ac posuere turpis iaculis vitae. Donec turpis libero, auctor quis nibh in, accumsan dictum arcu. Mauris euismod massa sit amet turpis auctor finibus.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet tempor quam, ac posuere turpis iaculis vitae. Donec turpis libero, auctor quis nibh in, accumsan dictum arcu. Mauris euismod massa sit amet turpis auctor finibus.
+        </div>
+    </div>
+
+    <!-- EXAMPLE 2 -->
+    <div class="flex-example">
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet tempor quam, ac posuere turpis iaculis vitae. Donec turpis libero, auctor quis nibh in, accumsan dictum arcu. Mauris euismod massa sit amet turpis auctor finibus.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet tempor quam, ac posuere turpis iaculis vitae. Donec turpis libero, auctor quis nibh in, accumsan dictum arcu. Mauris euismod massa sit amet turpis auctor finibus.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet tempor quam, ac posuere turpis iaculis vitae. Donec turpis libero, auctor quis nibh in, accumsan dictum arcu. Mauris euismod massa sit amet turpis auctor finibus.
+        </div>
+    </div>
+</body>
+</html>
+
+<style type="text/css">
+.container {
+    border: 1px solid orange;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.container > div {
+    width: 33.3%;
+    float: left;
+    background: #EFEFEF;
+    display: inline;
+}
+
+.container div > div {
+    margin: 8px;
+    padding: 5px;
+    background: #fff;
+}
+</style>
+
+<style type="text/css">
+.flex-example {
+    display: flex;
+    border: 1px solid orange;
+    margin-bottom: 10px;
+}
+
+.flex-example div {
+    flex: 1;
+    padding: 8px;
+}
+</style>

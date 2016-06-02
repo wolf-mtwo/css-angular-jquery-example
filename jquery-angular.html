@@ -1,0 +1,73 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <!-- JQUERY -->
+    <div class="jquery">
+        <h4 id="title">
+            TODO LIST
+        </h4>
+        <div id="list">
+        </div>
+    </div>
+
+    <!-- ANGULAR -->
+    <div class="angular" ng-controller="TodoController">
+        <h4>
+            {{title}}
+        </h4>
+        <div ng-repeat="item in list" ng-click="select(item)">
+            {{item}} (click me)
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+var TODO_LIST = [
+    "List item 1",
+    "List item 2",
+    "List item 3",
+    "List item 4",
+    "List item 5",
+    "List item 6",
+    "List item 7",
+    "List item 8",
+    "List item 9",
+    "List item 0"
+];
+
+// JQUERY
+$(function() {
+    for (var i = 0; i < TODO_LIST.length; i++) {
+        $('#list').append([
+                '<div>',
+                TODO_LIST[i] + ' (click me)',
+                '</div>'
+            ].join(''));
+    };
+
+    // On click
+    $('#list div').on('click', function() {
+        var text = $(this).text();
+        $('#title').html(text.replace(' (click me)', ''));
+    });
+});
+
+// ANGULAR
+var myApp = angular.module('myApp', []);
+myApp.controller('TodoController', function($scope) {
+    $scope.title = 'TODO LIST';
+    $scope.list = TODO_LIST;
+
+    // On click
+    $scope.select = function(item) {
+        $scope.title = item;
+    }
+});
+</script>
